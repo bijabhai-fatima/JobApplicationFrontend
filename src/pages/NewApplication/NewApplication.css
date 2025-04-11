@@ -66,16 +66,16 @@
     background: transparent;
     border: none;
     border-bottom: 3px solid var(--color-primary);
-    color: var(--color-black); /* text color */
+    color: var(--color-black);  
     font-family: var(--font-family-montserrat);
     outline: none;
     color: var(--color-secondary-accent);
   }
   
-  /* Red placeholder */
+ 
   .custom-input::placeholder {
-    color: var(--color-secondary); /* e.g. #ff6b6b */
-    opacity: 1; /* ensures it's not faded */
+    color: var(--color-secondary);  
+    opacity: 1;  
   }
 
   .date-status-container {
@@ -140,20 +140,20 @@
     margin-top: 1.5rem;
     padding: 0.75rem 2rem;
     width: 30%; 
-    background-color: var(--color-secondary-accent); /* red-pink */
+    background-color: var(--color-secondary-accent);  
     color: var(--color-white);
     font-family: var(--font-family-shrikhand);
     font-style: italic; 
     font-size: 1.2rem;
     border: none;
-    border-radius: 999px; /* pill shape */
+    border-radius: 999px;  
     cursor: pointer;
     transition: transform 0.2s ease;
     text-align: center;
     display: inline-block;
   }
   
-  /* Optional: subtle hover effect */
+ 
   .add-button:hover {
     transform: scale(1.05);
   }

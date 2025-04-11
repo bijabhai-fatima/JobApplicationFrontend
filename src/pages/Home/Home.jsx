@@ -10,8 +10,6 @@ import StatusTag from '../../components/StatusTag/StatusTag';
 import LoaderSpinner from '../../components/LoaderSpinner/LoaderSpinner';
 
 export default function Home() {
-  // Example static list — replace with actual data if needed
-
   const STATUS_LABELS = ['Applied', 'Interview', 'Offer', 'Rejected'];
   const STATUS_KEYS = ['applied', 'interview', 'offer', 'rejected'];
 
@@ -46,7 +44,6 @@ export default function Home() {
   const handleFilter = async () => {
     setOpenFilter('none');
     setLoading(true);
-
     try {
       if (startDate && endDate) {
         const data = await fetchApplicationsByFilter('rangefilter', {
@@ -67,6 +64,22 @@ export default function Home() {
       setLoading(false);
     }
   };
+
+  const clearFilter = async () => { 
+      fetchApplicationsByFilter('nofilter')
+        .then(res => {
+          console.log(res, res.length);
+          setApplications(res);
+        })
+        .catch(error => {
+          console.error('Error fetching applications:', error);
+          setApplications([]); // fallback to empty array on error
+        })
+        .finally(() => {
+          setLoading(false); // hide spinner after response
+          return;
+        }); 
+  }
 
   useEffect(() => {
     handleFilter();
@@ -90,6 +103,15 @@ export default function Home() {
               </div>
               <div class="filter-option" onClick={() => setOpenFilter('range')}>
                 Filter By Application date
+              </div>
+              <div
+                class="filter-option"
+                onClick={() => {
+                  setFilters('nofilter');
+                  clearFilter()
+                }}
+              >
+                Clear all Filters
               </div>
             </div>
           </div>
@@ -177,10 +199,10 @@ export default function Home() {
             </div>
           </div>
         )}
-      </header> 
+      </header>
       {loading ? (
         // <p>Loading...</p> // 👈 Replace with a spinner if you like
-        <LoaderSpinner/>
+        <LoaderSpinner />
       ) : applications.length === 0 ? (
         <p>No applications found.</p>
       ) : (

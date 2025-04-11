@@ -30,7 +30,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: var(--color-background); 
-  margin: 6rem 8rem; /* More spacious layout */
+  margin: 6rem 8rem;  
   padding: 0; 
   box-sizing: border-box; 
 }
