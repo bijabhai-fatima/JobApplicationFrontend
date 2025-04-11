@@ -1,5 +1,5 @@
 import React from 'react';
-import './StatusTag.css'; // optional if you're using external CSS
+import './StatusTag.css';  
 
 const statusStyles = {
   applied: {
@@ -25,8 +25,7 @@ const statusStyles = {
   }
 };
 
-const StatusTag = ({ status, handleClick }) => {
-    const normalizedStatus = status?.toLowerCase();
+const StatusTag = ({ status, handleClick }) => { 
   const style = statusStyles[status.toLowerCase()] || {};
   return (
     <div className="status-tag" style={style} onClick={handleClick}>

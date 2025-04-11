@@ -57,8 +57,7 @@ export default function NewApplication() {
   const handleSubmit = e => {
     console.log(form);
     e.preventDefault();
-    console.log('Submitting new application:', form);
-    // TODO: Call API to save application
+    console.log('Submitting new application:', form); 
     setUploading(true);
     postNewApplication(form)
       .then(res => {
@@ -150,7 +149,7 @@ export default function NewApplication() {
               <div class="status-dropdawn">
                 <div class="dropdawn-button" style={statusStyles[STATUS_KEYS[form.status]]}>
                   <div>
-                    {form.status == '' ? 'Choose Status' : STATUS_KEYS[form.status]}{' '}
+                    {STATUS_KEYS[form.status]}
                     {openDrpdawn ? (
                       <IoIosArrowUp onClick={() => setOpenDropdawn(false)} />
                     ) : (

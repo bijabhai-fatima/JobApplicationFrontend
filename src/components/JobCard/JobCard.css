@@ -1,29 +1,56 @@
 .job-card-primary { 
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
     background: #e4f5f0;
     border-radius: 20px;
     border: 2px solid #9e80f9;
     padding: 1rem 1.2rem; 
-    font-family: 'Segoe UI', sans-serif; 
-    box-shadow: 6px 6px 0 #a06ff0;
+    font-family: 'Segoe UI', sans-serif;  
     margin: 1rem;
     color: black;
-  }
+    position: relative;
+    transition: transform 0.2s ease; 
+  }  
+ .job-card-primary::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  left: 8px;
+  top: 8px;
+  background-color: #a06ff0;
+  z-index: -3;
+  position: absolute;
+  border-radius: 20px;
+  border: 2px solid var(--color-primary);
+  
+}  
 
   .job-card-secondary {
     width: 100%;
-  height: 100%;
+    height: 100%;
     background: #e4f5f0;
     border-radius: 20px;
     border: 2px solid var(--color-secondary);
     padding: 1rem 1.2rem; 
-    font-family: 'Segoe UI', sans-serif; 
-    box-shadow: 6px 6px 0 var(--color-secondary);
+    font-family: 'Segoe UI', sans-serif;  
     margin: 1rem;
     color: black;
+    position: relative;
+    transition: transform 0.2s ease;
+  } 
+  .job-card-secondary::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 8px;
+    top: 8px;
+    background-color: var(--color-secondary);
+    z-index: -3;
+    position: absolute;
+    border-radius: 20px;
+    border: 2px solid var(--color-secondary);
   }
-  
+
   .card-header {
     display: flex;
     justify-content: space-between;

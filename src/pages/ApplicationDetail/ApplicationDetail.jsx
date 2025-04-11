@@ -28,7 +28,7 @@ const statusStyles = {
   },
   interview: {
     backgroundColor: '#ffd966',
-    color: '#222',
+    color: '#000',
     borderColor: '#ffd966',
   },
 };
@@ -36,10 +36,9 @@ const statusStyles = {
 function formatDateForInput(dateInput) {
   const date = new Date(dateInput);
 
-  if (isNaN(date.getTime())) return ''; // Invalid date
-
+  if (isNaN(date.getTime())) return '';
   const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0'); // months are 0-based
+  const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
 
   return `${year}-${month}-${day}`;
@@ -83,7 +82,7 @@ export default function ApplicationDetail() {
     try {
       setUpdating(true);
       const updated = await updateApplicationStatus(id, newStatus);
-      setApplication(updated); // update the UI with new status
+      setApplication(updated);
     } catch (err) {
       console.error('Failed to update status:', err);
     } finally {
@@ -97,7 +96,7 @@ export default function ApplicationDetail() {
     if (!application._id) return;
     setDeleteing(true);
     try {
-      const res = await deleteApplicationById(application._id);
+      await deleteApplicationById(application._id);
       setApplication(null);
       alert('Job Application deleted sucessfully!');
     } catch (err) {
@@ -123,35 +122,29 @@ export default function ApplicationDetail() {
           <form>
             <div class="close-icon-container">
               <div>
-                <IoMdClose onClick={() => navigate('/')} />
+                <IoMdClose onClick={() => navigate('/')}/>
               </div>
             </div>
             <div>
-              <input
-                class="custom-input"
-                placeholder={application.role}
-                name="role"
-                value={application.role}
-                disabled
-              />
+              <div class="custom-input">{application.role}</div>
             </div>
             <div>
-              <input
-                class="custom-input"
-                placeholder={application.company}
-                name="company"
-                value={application.company}
-                disabled
-              />
+              <div class="custom-input">{application.company}</div>
             </div>
             <div>
-              <input
-                class="custom-input"
-                placeholder={application.link}
-                name="link"
-                value={application.link}
-                disabled
-              />
+              <div class="custom-input">
+                <a
+                  href={application.link}
+                  target="_blank"
+                  style={{
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    fontStyle: 'italic'
+                  }}
+                >
+                  {application.link}
+                </a>
+              </div>
             </div>
             <div class="date-status-container">
               <div>

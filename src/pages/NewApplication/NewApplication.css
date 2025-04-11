@@ -58,7 +58,18 @@
     display: flex;
     align-items: center;
     justify-content: center; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0s linear;
+    box-sizing: border-box;
   }
+  .close-icon-container > div:hover {
+    background-color: var(--color-background); /* slightly darker primary */
+    transform: scale(1.05); /* gentle pop */
+    box-shadow: 4px 4px var(--color-primary); /* optional depth */ 
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+  } 
+
   .custom-input {
     width: 100%;
     padding: 0.5rem 0;
@@ -109,6 +120,7 @@
     font-size: 1rem;
     border-radius: 30px;
   }
+
   .dropdawn-button >div {
     margin: 0 0.5em;
     display: flex;
