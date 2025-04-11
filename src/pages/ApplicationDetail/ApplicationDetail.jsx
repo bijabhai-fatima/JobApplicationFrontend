@@ -214,7 +214,7 @@ export default function ApplicationDetail() {
             <button
               class="add-button"
               type="submit"
-              disabled={loading}
+              disabled={deleteing}
               onClick={() => handleDelete()}
             >
               {deleteing ? 'Deleteing...' : 'Delete'}
