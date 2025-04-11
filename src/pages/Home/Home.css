@@ -1,0 +1,193 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  /* Welcome Text */
+  .welcome-text {
+    font-family: var(--font-famity-dm-serif);
+    font-size: 3rem;
+    font-weight: bolder;
+    color: var(--color-secondary);
+    margin: 0;
+  }
+  
+  /* Filter Dropdown */
+  .filter-dropdown {
+    position: relative; 
+  }
+  
+  .filter-button {
+    width: 15em;
+    height: 4em;
+    font-family: var(--font-family-montserrat);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8em;
+  }
+  .filter-button >div {
+    margin: 0 0.5em;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .filter-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    text-align: center;
+    font-weight: 450;
+    font-size: 0.8em; 
+    border: 2px solid var(--color-primary);
+    border-top: none;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+  
+  .filter-option {
+    padding: 10px;
+    cursor: pointer;
+    font-family: var(--font-family-montserrat);
+    border-top: 1px solid var(--color-primary);
+    background-color: var(--color-white);
+  }
+  
+  .filter-option:hover {
+    background-color: var(--color-primary-accent);
+    color: white;
+  }
+  
+  /* Show dropdown on hover (basic toggle for demo) */
+  .filter-dropdown:hover .filter-options {
+    display: flex;
+  }
+
+  .up-left-shadow { 
+    box-shadow: -4px -4px 0 var(--color-primary);  
+  }
+
+  .status-filter-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-background);  
+    border: 2px solid var(--color-primary);
+    border-top: none;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;  
+    padding: 0.7rem;  
+    flex-wrap: wrap; 
+    z-index: 10;
+    box-sizing: border-box;
+  }
+
+  .range-filter-option-feild {
+    display: flex;
+    flex-direction: column; 
+    row-gap: 0.25rem;
+  }
+
+  .range-filter-option-feild > label {
+    font-family: var(--font-family-montserrat);
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+
+  .apply-filter {
+    margin: 0.50rem 0;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-align: center;
+    width: fit-content;
+    font-family: var(--font-family-montserrat);
+    background-color: var(--color-secondary);
+    border: none;
+    color: var(--color-white);
+    cursor:pointer;
+  }
+
+  .custom-date {
+    background-color: var(--color-background);
+    color: var(--color-black);
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: var(--font-family-montserrat);
+    font-size: 0.8rem;
+  
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  .custom-date:focus {
+    border-color: var(--color-primary-accent);
+  }
+  
+  /* Optional: Change calendar icon color (Chrome/WebKit only) */
+  .custom-date::-webkit-calendar-picker-indicator {
+    filter: invert(34%) sepia(85%) saturate(438%) hue-rotate(235deg)
+      brightness(100%) contrast(101%);
+    cursor: pointer;
+  }
+
+  .job-applications-container {
+    margin: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .job-applications-container > a {
+    text-decoration: none;
+    color: inherit; 
+    width: 80%;  
+    height: 80%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .new-application-button-container {
+    font-size: xxx-large;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: relative;
+  }
+
+  .new-application-button-container::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background); /* or any color */
+    border-radius: 100%; /* optional, matches shape */
+    z-index: -1; /* behind the icon */
+    border: 2px solid var(--color-primary);
+    box-sizing: border-box; 
+  }

@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+ 
+.background-bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind everything */
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Customize each one */
+.bubble-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--gradient-main);
+  top: -5%;
+  left: 5%;
+}
+
+.bubble-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--gradient-main);
+  top: 70%;
+  left: -10%;
+}
+
+.bubble-3 {
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-main);
+  top: -20%;
+  right: -10%;
+}
+
+.bubble-4 {
+  width: 200px;
+  height: 200px;
+  background: var(--gradient-main);
+  top: 50%;
+  right: 25%;
+}
+
+.bubble-5 {
+  width: 100px;
+  height: 100px;
+  background: var(--gradient-main);
+  top: 25%;
+  left: 35%;
+}
+
+.bubble-6 {
+  width: 180px;
+  height: 180px;
+  background: var(--gradient-main);
+  top: 80%;
+  left: 40%;
+}

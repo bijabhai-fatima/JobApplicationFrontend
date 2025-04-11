@@ -1,0 +1,10 @@
+.status-tag {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-align: center;
+    width: fit-content;
+    font-family: var(--font-family-montserrat);
+  }
+  

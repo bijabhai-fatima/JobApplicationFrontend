@@ -1,0 +1,78 @@
+.job-card-primary { 
+  width: 100%;
+  height: 100%;
+    background: #e4f5f0;
+    border-radius: 20px;
+    border: 2px solid #9e80f9;
+    padding: 1rem 1.2rem; 
+    font-family: 'Segoe UI', sans-serif; 
+    box-shadow: 6px 6px 0 #a06ff0;
+    margin: 1rem;
+    color: black;
+  }
+
+  .job-card-secondary {
+    width: 100%;
+  height: 100%;
+    background: #e4f5f0;
+    border-radius: 20px;
+    border: 2px solid var(--color-secondary);
+    padding: 1rem 1.2rem; 
+    font-family: 'Segoe UI', sans-serif; 
+    box-shadow: 6px 6px 0 var(--color-secondary);
+    margin: 1rem;
+    color: black;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .card-header h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .status-tag {
+    background: #9e80f9;
+    color: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+  }
+  
+  .company-name {
+    margin: 0.2rem 0;
+    font-style: italic;
+  }
+  
+  .job-card a {
+    display: block;
+    margin: 0.3rem 0;
+    color: black;
+    text-decoration: underline;
+    word-break: break-all; 
+  }
+  
+  .card-bottom{
+    display: flex;
+    flex-direction: column;
+  }
+  .date-primary {
+    color: var(--color-primary-accent);
+    font-size: small;
+    font-weight: bold; 
+    text-align: right;
+  }
+
+  .date-secondary {
+    color: var(--color-secondary);
+    font-size: small;
+    font-weight: bold;
+    text-align: right;
+  }
+  
