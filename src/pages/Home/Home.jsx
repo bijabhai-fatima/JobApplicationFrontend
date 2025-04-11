@@ -220,7 +220,7 @@ export default function Home() {
             </Link>
           ))}
 
-          <Link to="/newapplication">
+          <Link to="/newapplication" style={{paddingTop: '1rem', paddingBottom: '1rem'}}>
             <div class="new-application-button-container">
               <IoMdAdd />
             </div>

@@ -1,6 +1,6 @@
 .job-card-primary { 
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     background: #e4f5f0;
     border-radius: 20px;
     border: 2px solid #9e80f9;
@@ -26,8 +26,8 @@
 }  
 
   .job-card-secondary {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     background: #e4f5f0;
     border-radius: 20px;
     border: 2px solid var(--color-secondary);
@@ -94,6 +94,7 @@
     font-size: small;
     font-weight: bold; 
     text-align: right;
+    padding-top: 0.5rem;
   }
 
   .date-secondary {
@@ -101,5 +102,6 @@
     font-size: small;
     font-weight: bold;
     text-align: right;
+    padding-top: 1rem;
   }
   
